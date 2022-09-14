@@ -142,7 +142,10 @@ button {
 }
 
 #histories {
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  grid-auto-rows: minmax(100px, auto);
   flex-wrap: wrap;
   justify-content: space-around;
 }
@@ -188,5 +191,10 @@ button {
   }
   .card {
     flex-direction: column;
+  }
+}
+@media only screen and (max-device-width: 780px) {
+  #histories{
+    grid-template-columns: repeat(1, 1fr);
   }
 }
